@@ -1,4 +1,3 @@
-import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "./../assets/logo.png";
@@ -18,7 +17,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <img className="h-12 w-12 mr-2" src={logo} alt="logo" />
-            <span className="text-xl tracking-tight font-serif">LoveStory</span>
+            <span className="text-xl tracking-tight font-serif">
+              CanvasLove
+            </span>
           </div>
           <motion.ul
             initial={{ opacity: 0 }}
@@ -28,14 +29,14 @@ const Navbar = () => {
           >
             {navItems.map((item, index) => (
               <li key={index}>
-                <Link
-                  to={item.href}
-                  smooth={true}
-                  duration={500}
-                  className="cursor-pointer hover:text-blue-500 transition-colors duration-300"
+                <motion.a
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: index * 0.2, duration: 0.5 }}
+                  href={item.href}
                 >
                   {item.label}
-                </Link>
+                </motion.a>
               </li>
             ))}
           </motion.ul>
@@ -45,14 +46,15 @@ const Navbar = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="hidden lg:flex justify-center space-x-12 items-center"
           >
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              className="py-2 px-3 border border-neutral-700 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-300 cursor-pointer"
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              href="#"
+              className="py-2 px-3 border border-neutral-700 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-300"
             >
               Contact us
-            </Link>
+            </motion.a>
           </motion.div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
@@ -80,17 +82,33 @@ const Navbar = () => {
                   key={index}
                   className="py-4"
                 >
-                  <Link
-                    to={item.href}
-                    smooth={true}
-                    duration={500}
-                    className=" cursor-pointer hover:text-blue-500 transition-colors duration-300"
+                  <motion.a
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: index * 0.2, duration: 0.5 }}
+                    href={item.href}
                   >
                     {item.label}
-                  </Link>
+                  </motion.a>
                 </motion.li>
               ))}
             </motion.ul>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="flex space-x-6"
+            >
+              <motion.a
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                href="#"
+                className="py-2 px-3 border border-neutral-700 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-300"
+              >
+                Contact us
+              </motion.a>
+            </motion.div>
           </motion.div>
         )}
       </div>
