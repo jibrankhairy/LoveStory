@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { packages } from "../data/package";
 
-const PackageSection = () => {
+interface PackagesProps {
+  handleBookingClick: () => void;
+}
+
+const PackageSection = ({ handleBookingClick }: PackagesProps) => {
   return (
     <section id="packages">
       <motion.div
@@ -59,6 +63,10 @@ const PackageSection = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: index * 0.2 + 0.5, duration: 0.5 }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleBookingClick();
+                    }}
                   >
                     Book Now
                   </motion.button>

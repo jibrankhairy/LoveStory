@@ -21,9 +21,7 @@ const Navbar = ({ handleContactUsClick }: NavbarProps) => {
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <img className="h-12 w-12 mr-2" src={logo} alt="logo" />
-            <span className="text-xl tracking-tight font-serif">
-              CanvasLove
-            </span>
+            <span className="text-xl tracking-tight font-serif">LoveStory</span>
           </div>
           <motion.ul
             initial={{ opacity: 0 }}
@@ -43,6 +41,7 @@ const Navbar = ({ handleContactUsClick }: NavbarProps) => {
                     const element = document.getElementById(item.href);
                     element?.scrollIntoView({ behavior: "smooth" });
                   }}
+                  className="text-black hover:text-blue-500 transition-colors duration-300"
                 >
                   {item.label}
                 </motion.a>
