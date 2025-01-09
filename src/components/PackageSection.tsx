@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { packages } from "../data/package";
 
 interface PackagesProps {
-  handleBookingClick: () => void;
+  handleBookingClick?: () => void;
 }
 
 const PackageSection = ({ handleBookingClick }: PackagesProps) => {
@@ -65,7 +65,9 @@ const PackageSection = ({ handleBookingClick }: PackagesProps) => {
                     transition={{ delay: index * 0.2 + 0.5, duration: 0.5 }}
                     onClick={(e) => {
                       e.preventDefault();
-                      handleBookingClick();
+                      if (handleBookingClick) {
+                        handleBookingClick();
+                      }
                     }}
                   >
                     Book Now
