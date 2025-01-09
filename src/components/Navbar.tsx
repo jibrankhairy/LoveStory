@@ -1,10 +1,14 @@
+import logo from "./../assets/logo.png";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "./../assets/logo.png";
 import { navItems } from "../data/navItems";
 import { motion } from "framer-motion";
 
-const Navbar = () => {
+interface NavbarProps {
+  handleContactUsClick: () => void;
+}
+
+const Navbar = ({ handleContactUsClick }: NavbarProps) => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -57,6 +61,10 @@ const Navbar = () => {
               transition={{ delay: 0.2, duration: 0.5 }}
               href="#"
               className="py-2 px-3 border border-neutral-700 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                handleContactUsClick();
+              }}
             >
               Contact us
             </motion.a>
@@ -115,6 +123,10 @@ const Navbar = () => {
                 transition={{ delay: 0.2, duration: 0.5 }}
                 href="#"
                 className="py-2 px-3 border border-neutral-700 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleContactUsClick();
+                }}
               >
                 Contact us
               </motion.a>

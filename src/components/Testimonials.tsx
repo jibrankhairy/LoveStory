@@ -6,7 +6,13 @@ const Testimonials = () => {
   return (
     <section id="testimonials">
       <div className="py-10 sm:py-16 lg:py-20 bg-gray-100">
-        <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="container mx-auto px-4"
+        >
           <h2 className="text-xl sm:text-2xl mb-4 sm:mb-6 font-serif text-center">
             Testimonials
           </h2>
@@ -56,7 +62,7 @@ const Testimonials = () => {
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

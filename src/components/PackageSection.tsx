@@ -4,7 +4,13 @@ import { packages } from "../data/package";
 const PackageSection = () => {
   return (
     <section id="packages">
-      <div className="py-10 sm:py-16 lg:py-20 bg-gray-100">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="py-10 sm:py-16 lg:py-20 bg-gray-100"
+      >
         <div className="container mx-auto px-4">
           <h2 className="text-xl sm:text-2xl mb-4 sm:mb-6 font-serif text-center">
             Packages
@@ -61,7 +67,7 @@ const PackageSection = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
