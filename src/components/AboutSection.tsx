@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import Image1 from "../assets/Aboutimg/image1.webp";
-import Image2 from "../assets/Aboutimg/image2.webp";
-import Image3 from "../assets/Aboutimg/image3.webp";
+import Image1 from "../assets/Aboutimg/img1.jpg";
+import Image2 from "../assets/Aboutimg/img2.jpg";
+import Image3 from "../assets/Aboutimg/img3.jpg";
 import React from "react";
 
 const AboutSection = React.memo(() => {
@@ -63,7 +63,7 @@ const AboutSection = React.memo(() => {
                   <img
                     src={Image1}
                     alt="Image 1"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover lazyload"
                     loading="lazy"
                   />
                 </motion.div>
@@ -77,12 +77,12 @@ const AboutSection = React.memo(() => {
                   <img
                     src={Image2}
                     alt="Image 2"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover lazyload"
                     loading="lazy"
                   />
                 </motion.div>
                 <motion.div
-                  className="col-span-1 row-span-1 bg-gray-200 h-48 sm:h-48 lg:h-48 rounded-lg overflow-hidden"
+                  className="col-span-1 row-span-1 bg-gray-200 h-48 sm:h-48 lg:h-48 rounded-lg overflow-hidden "
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6, duration: 0.8 }}
@@ -90,8 +90,8 @@ const AboutSection = React.memo(() => {
                 >
                   <img
                     src={Image3}
-                    alt="Gallery 3"
-                    className="w-full h-full object-cover"
+                    alt="Image 3"
+                    className="w-full h-full object-cover lazyload"
                     loading="lazy"
                   />
                 </motion.div>

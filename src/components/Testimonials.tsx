@@ -19,13 +19,16 @@ const Testimonials = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: index * 0.2, duration: 0.5 }}
                 className="w-full sm:w-1/2 lg:w-1/3 p-4"
               >
                 <motion.div
                   className="p-6 border border-neutral-700 rounded-xl bg-white hover:shadow-lg transition-shadow duration-300"
                   initial={{ scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: index * 0.2, duration: 0.5 }}
                 >

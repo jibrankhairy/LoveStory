@@ -1,9 +1,9 @@
-import gallery1 from "../assets/Gallery/gallery1.webp";
-import gallery2 from "../assets/Gallery/gallery2.webp";
-import gallery3 from "../assets/Gallery/gallery3.webp";
-import gallery4 from "../assets/Gallery/gallery4.webp";
-import gallery5 from "../assets/Gallery/gallery5.webp";
-import gallery6 from "../assets/Gallery/gallery6.webp";
+import gallery1 from "../assets/Gallery/gallery1.jpg";
+import gallery2 from "../assets/Gallery/gallery2.jpg";
+import gallery3 from "../assets/Gallery/gallery3.jpg";
+import gallery4 from "../assets/Gallery/gallery4.jpg";
+import gallery5 from "../assets/Gallery/gallery5.jpg";
+import gallery6 from "../assets/Gallery/gallery6.jpg";
 
 export const gallery = [
   {

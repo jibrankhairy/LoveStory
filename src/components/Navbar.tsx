@@ -33,7 +33,12 @@ const Navbar = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: index * 0.2, duration: 0.5 }}
-                  href={item.href}
+                  href={`#${item.href}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById(item.href);
+                    element?.scrollIntoView({ behavior: "smooth" });
+                  }}
                 >
                   {item.label}
                 </motion.a>
@@ -86,7 +91,12 @@ const Navbar = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: index * 0.2, duration: 0.5 }}
-                    href={item.href}
+                    href={`#${item.href}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.getElementById(item.href);
+                      element?.scrollIntoView({ behavior: "smooth" });
+                    }}
                   >
                     {item.label}
                   </motion.a>
