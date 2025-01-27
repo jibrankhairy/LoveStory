@@ -1,4 +1,4 @@
-# 💕 LoveStory Website
+# LoveStory Website
 
 LoveStory Website is a platform designed to help couples plan their wedding effortlessly. This website offers various features to simplify the wedding planning process, making it enjoyable and memorable.
 
